@@ -51,3 +51,18 @@ function poi(){
         alert ('Ímpar')
     )
 }
+
+function conv(){
+    let graus = document.getElementById('graus').value
+    let cF = document.getElementById('cls-frh').value
+
+    if (cF == 'cls'){
+        let b = (graus * 9/5) + 32
+        alert (`${b} °F`)
+
+    } else if (cF=='frh'){
+        let a= (graus - 32) * 5/9
+        alert (`${a} °C`)
+    }
+
+}

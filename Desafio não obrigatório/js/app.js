@@ -41,3 +41,13 @@ function ord(){
     }
     alert (`${pri} ${seg} ${ter}`)
 }
+
+function poi(){
+    let num = prompt('Insira o número')
+
+    if (num%2==0) {
+        alert ('Par')
+    } else(
+        alert ('Ímpar')
+    )
+}

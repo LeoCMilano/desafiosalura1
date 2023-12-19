@@ -36,7 +36,6 @@ function ord(){
     while(i!==3) {
         if (nums[i]>pri && nums[i]< ter) {
             seg = nums[i]
-            
         }
     i++
     }

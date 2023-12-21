@@ -12,7 +12,7 @@ function adicionar(){
     document.getElementById('nome-amigo').value = '';
 }
 
-function sortear(){
+function sortear2(){
     parts= document.getElementById('lista-amigos').innerText;
     let numRan;
     const nome = parts.split(', ');
@@ -41,4 +41,34 @@ function reiniciar(){
     document.getElementById('nome-amigo').value = '';
     document.getElementById('lista-amigos').innerText = '';
     document.getElementById('lista-sorteio').innerText = '';
+}
+
+function sortear(){
+    parts= document.getElementById('lista-amigos').innerText;
+    const nome = parts.split(', ');
+    embaralha(nome)
+    let lista = ""
+    i=0
+    while(i< nome.length){
+        if(i==nome.length-1){
+            lista+=nome[i]+'->'+nome[0]
+        }else{
+            lista+=nome[i]+'->'+nome[i+1]+'<br>'
+        }
+    i++
+    }
+    document.getElementById('lista-sorteio').innerHTML = lista
+}
+
+
+function embaralha(lista) {
+
+    let indice = lista.length
+    
+    while(indice) {
+        // atenção para o pós-incremento indice-- 
+        const indiceAleatorio = Math.floor(Math.random() * indice--);
+        [lista[indice], lista[indiceAleatorio]] = 
+            [lista[indiceAleatorio], lista[indice]];
+    }
 }

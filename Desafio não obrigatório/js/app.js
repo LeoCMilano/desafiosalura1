@@ -22,7 +22,7 @@ function pali(){
     //alert (`Sobe: ${sobe} ${meuArray[sobe]} Desce: ${desce} ${meuArray[desce]}`);    
 }
 
-function ord(){
+function ord1(){
     let a = prompt('Insira o primeiro número');
     let b = prompt('Insira o segundo número');
     let c = prompt('Insira o terceiro número');
@@ -41,7 +41,17 @@ function ord(){
     }
     alert (`${pri} ${seg} ${ter}`)
 }
+function ord(){
+    let a = prompt('Insira o primeiro número');
+    let b = prompt('Insira o segundo número');
+    let c = prompt('Insira o terceiro número');
 
+    const nums = [a,b,c];
+
+    nums.sort((a, b) => a - b);
+
+    alert (nums)
+}
 function poi(){
     let num = prompt('Insira o número')
 
